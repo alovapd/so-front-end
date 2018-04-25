@@ -1,5 +1,8 @@
 .App {
   text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 .App-logo {
@@ -8,13 +11,22 @@
 }
 
 .App-header, .App-footer {
-  background-color: #222;
+  background-color: rgb(31, 80, 26);
   color: white;
 }
 
 .App-header {
-  height: 150px;
+  height: 100px;
   padding: 20px;
+}
+
+.App-navbar {
+  background-color: rgba(31, 80, 26, 0.8);
+  height: 20px;
+}
+
+.App-body {
+  flex: 1;
 }
 
 .App-footer {
@@ -29,19 +41,20 @@
 .container {
   display: flex; /* or inline-flex */
   align-items: center;
-  justify-content: space-between;
 }
 
 .row {
+  display: flex;
   flex-direction: row;
 }
 
 .column {
+  display: flex;
   flex-direction: column;
   align-items: stretch;
 }
 
-.dev {
+/* .dev { 
   border-color: red;
   border-style: solid;
-}
+} */
