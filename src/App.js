@@ -18,14 +18,16 @@ class App extends Component {
 class Header extends Component {
   render() {
     return (
-        <header className="App-header container dev">
-          <div className="dev">
-            <img src={logo} className="App-logo" alt="logo" />
-          </div>
-          <div className="dev">
-            <h1 className="App-title">Case Tracker</h1>
-          </div>
-          <div className="dev">
+        <header className="App-header container dev dnn_header">
+          <div className="App-wrapper row">
+            <div className="dev">
+              <img src={logo} className="App-logo" alt="logo" />
+            </div>
+            <div className="dev">
+              <h1 className="App-title">Case Tracker</h1>
+            </div>
+            <div className="dev">
+            </div>
           </div>
         </header>
     );
@@ -43,6 +45,15 @@ class NavBar extends Component {
   }
 }
 
+class NavItem extends Component {
+  render() {
+    return(
+      <div className="App-navitem">{this.props.title}</div>
+    );
+  }
+}
+
+
 class Body extends Component {
   render() {
     return(
@@ -59,14 +70,6 @@ class Footer extends Component {
       <footer className="App-footer dev">
         <h1>Footer</h1>
       </footer> 
-    );
-  }
-}
-
-class NavItem extends Component {
-  render() {
-    return(
-      <div>{this.props.title}</div>
     );
   }
 }
