@@ -1,59 +1,69 @@
-@import url("https://jacksoncountyor.org/Resources/Shared/stylesheets/dnndefault/7.0.0/default.css?cdv=517");
-@import url("https://jacksoncountyor.org/Portals/_default/Skins/Brown-Business-117/skin.css?cdv-517");
 
 .App {
-  text-align: center;
+  max-width: 980px;
+  margin: auto;
   display: flex;
-  min-height: 100vh;
-  flex-direction: column;
 }
 
-.App-wrapper{
-  width: 980px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-  padding-right: 20px;
-}
-
-.App-header, .App-footer {
-  background-color: rgb(31, 80, 26);
-  color: white;
-}
-
-.App-header {
+.header-parent{
   background: url(images/header_bg.png) repeat-x 0 0 #e9e8e8;
+  min-height: 125px;
 }
 
-.App-navbar {
-  background-color: rgba(31, 80, 26, 0.8);
-  height: 20px;
-  background: url(images/nav_bg.png) repeat-x 0 0;
+.header-logo {
+  flex: 1;
+}
+
+.header-title {
+  flex: 6;
+}
+
+.nav-parent{
+  background: url(images/header_bg.png) repeat-x 0 0 #e9e8e8;
   zoom: 1;
   position: relative;
   min-height: 58px;
-  margin-top: -7px;  
+  margin-top: -7px;
 }
 
-.App-footer {
-  height: 75px;
-  padding: 20px;
-  background: url(images/footer_bg.png) repeat-x 0 0 #323232;
+.line-bottom-hero{
+  background-image: url(images/line_bg.png);
+  background-repeat: repeat-x;
+  background-position: 0 0;
+  height: 10px;
+  background-color: #053022;
+  min-height:10px;
 }
 
-/* .App-navitem{
-  padding: 5px;
-} */
-
-.App-title {
-  font-size: 1.5em;
-  color:black;
+.App-navitem {
+  justify-content: left;
+  margin: 10px,10px,10px,10px;
 }
 
+.header-space{
+  min-height: 300px;
+}
+
+.searchspace{
+  min-height: 40px;
+  max-height:40px;
+  background-color:#383838;
+}
+
+.hero-parent{
+  background-image: url(images/banner_bg.png);
+  background-repeat: repeat;
+  background-position: 0 0;
+  background-color: #053022;
+  min-height: 350px;
+  display:flex;
+}
+
+.hero-content{
+  min-height: 350px;
+  min-width: 980px;
+  margin:auto;
+}
 
 .dev { 
   border-color: red;

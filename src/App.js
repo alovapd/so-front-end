@@ -7,31 +7,44 @@ import 'react-flexview/lib/flexView.css'
 class App extends Component {
   render() {
     return (
-      <FlexView column children>
+      <div >
+        <SearchSpace/>
         <Header/>
         <NavBar/>
-        <Body/>
-        <Footer/>
-      </FlexView>
+        <Hero/>
+        <HeroLineBottom/>
+        {/* <Footer/> */}
+      </div>
     );
   }
 }
 
+class SearchSpace extends Component {
+  render() {
+    return(
+      <div className="searchspace">
+        <div className="login">
+          
+        </div>
+      </div> 
+    );
+  }
+}
+
+
 class Header extends Component {
   render() {
     return (
-        <FlexView marginBottom="auto" className="App-header container dev dnn_headerr">
-          <div className="App-wrapper row">
-            <div className="dev">
+        <div className="header-parent">
+          <div className="App">
+            <div className="header-logo ">
               <img src={logo} className="App-logo" alt="logo" />
             </div>
-            <div className="dev">
-              <h1 className="App-title">Case Tracker</h1>
-            </div>
-            <div className="dev">
+            <div className="header-title ">
+              <h1 >Detective's Case Tracker</h1>
             </div>
           </div>
-        </FlexView>
+        </div>
     );
   }
 }
@@ -40,11 +53,13 @@ class NavBar extends Component {
   render() {
     const navItems = ["Home","Page2","Page3"]
     return(
-      <FlexView vAlignContent='center' basis={'50'} className="App-navbar ">
-        <div className='dev'>
-        {navItems.map((item) => <NavItem title={item}/>)}
+      <div className="nav-parent">
+        <div className="App ">
+          <div className='App App-navitem'>
+            {navItems.map((item) => <NavItem title={item}/>)}
+          </div>
         </div>
-      </FlexView> 
+      </div> 
     );
   }
 }
@@ -52,30 +67,40 @@ class NavBar extends Component {
 class NavItem extends Component {
   render() {
     return(
-      <div className="App-navitem">{this.props.title}</div>
+        <div className="App ">{this.props.title}</div>
     );
   }
 }
 
-
-class Body extends Component {
+class Hero extends Component {
   render() {
     return(
-      <FlexView grow >
-        <h1>Body</h1>
-      </FlexView> 
+      <div className="hero-parent">
+          <div className="App hero-content">
+            <h1>Hero</h1>
+          </div> 
+      </div>
     );
   }
 }
 
-class Footer extends Component {
+class HeroLineBottom extends Component {
   render() {
     return(
-      <FlexView marginTop="auto" className="App-footer">
-        <h1>Footer</h1>
-      </FlexView> 
+        <div className="line-bottom-hero">
+        </div>
     );
   }
 }
+
+// class Footer extends Component {
+//   render() {
+//     return(
+//       <FlexView marginTop="auto" className="App-footer">
+//         <h1>Footer</h1>
+//       </FlexView> 
+//     );
+//   }
+// }
 
 export default App;
