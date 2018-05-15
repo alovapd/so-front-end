@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
 import logo from './images/logo.png';
 import './App.css';
+import FlexView from 'react-flexview';
+import 'react-flexview/lib/flexView.css'
 
 class App extends Component {
   render() {
     return (
-      <div className="container App column">
+      <FlexView column children>
         <Header/>
         <NavBar/>
         <Body/>
         <Footer/>
-      </div>
+      </FlexView>
     );
   }
 }
@@ -18,7 +20,7 @@ class App extends Component {
 class Header extends Component {
   render() {
     return (
-        <header className="App-header container dev dnn_header">
+        <FlexView marginBottom="auto" className="App-header container dev dnn_headerr">
           <div className="App-wrapper row">
             <div className="dev">
               <img src={logo} className="App-logo" alt="logo" />
@@ -29,7 +31,7 @@ class Header extends Component {
             <div className="dev">
             </div>
           </div>
-        </header>
+        </FlexView>
     );
   }
 }
@@ -38,9 +40,11 @@ class NavBar extends Component {
   render() {
     const navItems = ["Home","Page2","Page3"]
     return(
-      <div className="App-navbar row">
+      <FlexView vAlignContent='center' basis={'50'} className="App-navbar ">
+        <div className='dev'>
         {navItems.map((item) => <NavItem title={item}/>)}
-      </div> 
+        </div>
+      </FlexView> 
     );
   }
 }
@@ -57,9 +61,9 @@ class NavItem extends Component {
 class Body extends Component {
   render() {
     return(
-      <footer className="App-body dev">
+      <FlexView grow >
         <h1>Body</h1>
-      </footer> 
+      </FlexView> 
     );
   }
 }
@@ -67,12 +71,11 @@ class Body extends Component {
 class Footer extends Component {
   render() {
     return(
-      <footer className="App-footer dev">
+      <FlexView marginTop="auto" className="App-footer">
         <h1>Footer</h1>
-      </footer> 
+      </FlexView> 
     );
   }
 }
 
 export default App;
-

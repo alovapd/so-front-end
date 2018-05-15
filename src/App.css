@@ -39,10 +39,6 @@
   margin-top: -7px;  
 }
 
-.App-body {
-  flex: 1;
-}
-
 .App-footer {
   height: 75px;
   padding: 20px;
@@ -58,23 +54,8 @@
   color:black;
 }
 
-.container {
-  display: flex; /* or inline-flex */
-  align-items: center;
-}
 
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
-.column {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-}
-
-/* .dev { 
+.dev { 
   border-color: red;
   border-style: solid;
-} */
+}
