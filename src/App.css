@@ -3,11 +3,27 @@
   max-width: 980px;
   margin: auto;
   display: flex;
+  height: 100%;
+}
+
+.loginspace{
+  min-height: 40px;
+  max-height:40px;
+  background-color:#383838;
+}
+
+.LoginBox{
+  flex-wrap:wrap
+}
+
+.login-format{
+  color:white;
+  flex: 1;
 }
 
 .header-parent{
   background: url(images/header_bg.png) repeat-x 0 0 #e9e8e8;
-  min-height: 125px;
+  min-height: 125px;  
 }
 
 .header-logo {
@@ -22,8 +38,7 @@
   background: url(images/header_bg.png) repeat-x 0 0 #e9e8e8;
   zoom: 1;
   position: relative;
-  min-height: 58px;
-  margin-top: -7px;
+  align-items: stretch;
 }
 
 .line-bottom-hero{
@@ -36,18 +51,15 @@
 }
 
 .App-navitem {
-  justify-content: left;
+  justify-content: center;
   margin: 10px,10px,10px,10px;
+  width: 100%;
+  min-height: 30px;
+  flex-wrap: wrap;
 }
 
 .header-space{
   min-height: 300px;
-}
-
-.searchspace{
-  min-height: 40px;
-  max-height:40px;
-  background-color:#383838;
 }
 
 .hero-parent{
@@ -55,14 +67,21 @@
   background-repeat: repeat;
   background-position: 0 0;
   background-color: #053022;
-  min-height: 350px;
+  min-height: 450px;
   display:flex;
 }
 
 .hero-content{
   min-height: 350px;
   min-width: 980px;
-  margin:auto;
+}
+
+.footer-parent{
+  background-image: url(images/footer_bg.png);
+  position: absolute;
+  left:0;
+  bottom: 0;
+  right: 0;
 }
 
 .dev { 
